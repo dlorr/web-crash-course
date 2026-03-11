@@ -1,0 +1,200 @@
+body {
+  font: 15px/1.5em Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color: #f4f4f4;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.button_1 {
+  height: 38px;
+  background: #18ff1c;
+  border: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.dark {
+  background-color: darkslategrey;
+  color: #ffffff;
+  padding: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+header {
+  background-color: #4c31cb;
+  color: #ffffff;
+  padding-top: 30px;
+  min-height: 70px;
+  border-bottom: #18ff1c 3px solid;
+}
+
+header a {
+  text-decoration: none;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+header li {
+  float: left;
+  display: inline;
+  padding: 0 20px 0 20px;
+}
+
+header #logo {
+  float: left;
+}
+header #logo h1 {
+  /* display: inline; */
+  margin: 0;
+}
+
+header nav {
+  float: right;
+  margin-top: 10px;
+}
+
+header .highlight,
+header .current a {
+  color: #18ff1c;
+  font-weight: bold;
+}
+
+header a:hover {
+  color: #f11614;
+  font-weight: bold;
+}
+
+#showcase {
+  min-height: 400px;
+  background: url(../images/retro.jpg) center;
+  color: #18ff1c;
+  text-align: center;
+  border-bottom: #18ff1c 3px solid;
+}
+
+#showcase h1 {
+  margin-top: 100px;
+  font-size: 55px;
+  margin-bottom: 10px;
+}
+
+#showcase p {
+  font-size: 20px;
+}
+
+#newsletter {
+  padding: 15px;
+  color: #18ff1c;
+  background: #4c31cb;
+}
+
+#newsletter h1 {
+  float: left;
+}
+
+#newsletter form {
+  float: right;
+  margin-top: 15px;
+}
+
+#newsletter input[type="email"] {
+  padding: 4px;
+  height: 25px;
+  width: 250px;
+}
+
+#boxes {
+  margin-top: 20px;
+}
+
+#boxes .box {
+  float: left;
+  width: 30%;
+  padding: 10px;
+  text-align: center;
+}
+
+#boxes .box img {
+  width: 90px;
+}
+
+aside#sidebar {
+  float: right;
+  width: 30%;
+  margin-top: 10px;
+}
+
+article#main-col {
+  float: left;
+  width: 65%;
+  margin-top: 10px;
+}
+
+aside#sidebar .quote input,
+aside#sidebar .quote textarea {
+  width: 90%;
+  padding: 5px;
+}
+
+ul#services li {
+  list-style: none;
+  padding: 20px;
+  border: #4c31cb 2px solid;
+  margin-bottom: 5px;
+  background: darkslategrey;
+  color: #ffffff;
+}
+
+footer {
+  padding: 20px;
+  margin-top: 20px;
+  color: #ffffff;
+  background-color: #4c31cb;
+  text-align: center;
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  header #logo,
+  header nav,
+  header nav li,
+  #newsletter h1,
+  #newsletter form,
+  #boxes .box,
+  article#main-col,
+  aside#sidebar {
+    float: none;
+    text-align: center;
+    width: 100%;
+  }
+  header {
+    padding-bottom: 20px;
+  }
+  #showcase h1 {
+    margin-top: 40px;
+  }
+  #newsletter button,
+  .quote button {
+    display: block;
+    width: 100%;
+  }
+  #newsletter form input[type="email"],
+  .quote input,
+  .quote textarea {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+}
