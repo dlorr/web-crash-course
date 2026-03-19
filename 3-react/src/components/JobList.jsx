@@ -1,11 +1,8 @@
 import { useEffect, useState } from "react";
 import Job from "./Job";
 import Spinner from "./Spinner";
-// import jobs from "../jobs.json";
-const JobList = ({ isHome = false }) => {
-  // used for jobs.json without API
-  // const jobsListings = isHome ? jobs.slice(0, 3) : jobs;
 
+const JobList = ({ isHome = false }) => {
   const [jobs, setJobs] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -25,12 +22,14 @@ const JobList = ({ isHome = false }) => {
 
     fetchJobs();
   }, []);
+
   return (
     <section className="bg-blue-50 px-4 py-10">
       <div className="container-xl lg:container m-auto">
         <h2 className="text-3xl font-bold text-indigo-500 mb-6 text-center">
           {isHome ? "Recent Jobs" : "Browse Jobs"}
         </h2>
+
         {loading ? (
           <Spinner loading={loading} />
         ) : (

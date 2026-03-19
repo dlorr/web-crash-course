@@ -6,13 +6,10 @@ const Job = ({ job }) => {
   const [showFullDescription, setShowFullDescription] = useState(false);
 
   let description = job.description;
+
   if (!showFullDescription) {
     description = description.substring(0, 90) + "...";
   }
-
-  const handleToggleDescription = () => {
-    setShowFullDescription((prevState) => !prevState);
-  };
 
   return (
     <div className="bg-white rounded-xl shadow-md relative">
@@ -25,8 +22,8 @@ const Job = ({ job }) => {
         <div className="mb-5">{description}</div>
 
         <button
-          onClick={handleToggleDescription}
-          className="text-indigo-500 mb-5 hover:text-indigo-600 cursor-pointer"
+          onClick={() => setShowFullDescription((prevState) => !prevState)}
+          className="text-indigo-500 mb-5 hover:text-indigo-600"
         >
           {showFullDescription ? "Less" : "More"}
         </button>
@@ -37,7 +34,7 @@ const Job = ({ job }) => {
 
         <div className="flex flex-col lg:flex-row justify-between mb-4">
           <div className="text-orange-700 mb-3">
-            <FaMapMarker className="inline-block text-lg mb-1 mr-1" />
+            <FaMapMarker className="inline text-lg mb-1 mr-1" />
             {job.location}
           </div>
           <Link

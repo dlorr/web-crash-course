@@ -5,7 +5,7 @@ import ViewAllJobs from "../components/ViewAllJobs";
 const HomePage = () => {
   return (
     <>
-      <Hero title="Test Title" subtitle="Test Subtitle" />
+      <Hero />
 
       <HomeCards />
 
