@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { Button } from '../button/button';
+import { Tasks } from '../tasks/tasks';
 
 @Component({
   selector: 'app-header',
-  imports: [Button],
+  imports: [Button, Tasks],
   templateUrl: './header.html',
   styleUrl: './header.css',
 })
